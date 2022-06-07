@@ -1,0 +1,197 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+li
+{
+    list-style: none;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+
+.container
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+form
+{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+input
+{
+    width: 40%;
+    padding: 10px;
+    font-size: 1.1em;
+    outline: none;
+    color: #0D1117;
+    font-weight: 600;
+    border: 2px solid #fff;
+}
+
+button
+{
+    padding: 10px 20px;
+    font-size: 1.1em;
+    background: #0D1117;
+    color: #fff;
+    border: none;
+    outline: none;
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+
+.user
+{
+    margin-top: 30px;
+    padding: 50px;
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.377);
+    border-radius: 10px;
+    background: #fff;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    opacity: 0;
+    transition: 1s;
+}
+
+.user p
+{
+    font-weight: 600;
+}
+
+.user.error 
+{
+    color: red;
+    font-size: 1.2em;
+}
+
+.img
+{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 40px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.479);
+}
+
+.img img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+body
+{
+    background: #0D1117;
+}
+
+.user-links
+{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+}
+
+
+.user-links p
+{
+    background: #0D1117;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+
+.user-info h1
+{
+    margin-bottom: 20px;
+    color: #0D1117;
+}
+
+
+
+@media (max-width: 700px) {
+    .container
+    {
+        height: auto;
+        padding: 40px 0;
+    }
+    .user
+    {
+        flex-direction: column;
+        width: 95%;
+        padding:50px 0px;
+    }
+
+    .user.error 
+    {
+        font-size: .8em;
+    }
+    .img
+    {
+        margin-right: 0;
+        margin-bottom: 20px;
+        width: 200px;
+        height: 200px;
+    }
+
+    .user-info
+    {
+        width: 100%;
+        padding: 0 20px;
+    }
+    .user-links 
+    {
+        
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 10px 0;
+    }
+
+    .user-info h1
+    {
+        font-size: 1.5em;
+        font-weight: 800;
+    }
+    .user-links p
+    {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    input
+    {
+        width: 50%;
+        font-size: .8em;
+    }
+
+    button
+    {
+        font-size: .8em;
+    }
+}
